@@ -11,7 +11,7 @@ late String color;
 //String mode;
 
 class BasicData {
-  //
+  //空安全，延迟赋值，动态类型
   void test1() {
     String? name; // "张三";
     //设置为空时的默认值
@@ -24,17 +24,9 @@ class BasicData {
     color = "红色";
     print("color:" + color);
 
+    //num类型
     num number = 1;
     num number2 = 1.1;
-  }
-
-  void test2() {
-    //列表 数组
-    final list = <int>[];
-    list.add(1);
-
-    //map
-    var map = <String, String>{};
 
     //动态类型
     dynamic dyData;
@@ -45,6 +37,22 @@ class BasicData {
     print("dyData:" + dyData);
   }
 
+  //列表，map
+  void test2() {
+    //列表 数组
+    final list = <int>[];
+    list.add(1);
+
+    const iterable = ['Salad', 'Popcorn', 'Toast'];
+    for (final element in iterable) {
+      print(element);
+    }
+
+    //map
+    var map = <String, String>{};
+  }
+
+  //列表的流操作
   void test3() {
     var list = <Boll>[];
     list.add(Boll(1, "吕"));

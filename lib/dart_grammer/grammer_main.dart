@@ -1,3 +1,5 @@
+import 'package:fluttertest/dart_grammer/async.dart';
+
 import 'basic_data.dart';
 import 'extends_test.dart';
 import 'func.dart';
@@ -5,8 +7,9 @@ import 'func.dart';
 /// 基础语法测试文件
 void main() {
   //testExtends();
-  testBasicData();
+  //testBasicData();
   //testFunc();
+  testAsync();
 }
 
 ///继承测试
@@ -30,5 +33,9 @@ void testBasicData() {
 void testFunc(){
   Func func = Func();
   func.test();
+}
 
+void testAsync(){
+  AsyncTest test = AsyncTest();
+  test.main();
 }
